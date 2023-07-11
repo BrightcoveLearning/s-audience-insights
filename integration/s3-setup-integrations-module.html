@@ -1,8 +1,16 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <h2 id=""></h2>
-    <p></p>
-  </section>
-</article>
+{% if site.product_name != 'Audience Insights' %}
+<section class="bcls-section">
+  <h2 id="integration_setup">Integration setup</h2>
+  <p>Follow the steps below to set up the integration to S3.</p>
+  <ol class="bcls-tasklist-restart">
+    <li>Login to Studio.</li>
+    <li>
+      Use the left navigation to go to the Integrations module:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integrations-module-home.png" alt="Go to Integrations Module">
+        <figcaption class="bcls-caption--image">Go to Integrations Module</figcaption>
+      </figure>
+    </li>
+  </ol>
+</section>
+{% endif %}
