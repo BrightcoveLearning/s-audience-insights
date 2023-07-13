@@ -1,4 +1,49 @@
 <section class="bcls-section">
-  <h2 id="Setting_up_user_permissions"></h2>
-  <p></p>
+  <h2 id="Setting_up_user_permissions">Set up user permissions</h2>
+  <p>Follow the steps below to set up user permissions to view the S3 bucket that reports are exported to.</p>
+  <h3>Create policy</h3>
+  <ol class="bcls-tasklist-restart">
+    <li>
+      Log into your AWS account and navigate to the IAM page. From there click Policies, then Create Policy as shown below:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/policies-create-policy-button.webp" alt="Create AWS Policy">
+        <figcaption class="bcls-caption--image">Create AWS Policy</figcaption>
+      </figure>
+    </li>
+    <li>
+      On the policy page, switch to the JSON policy editor and paste the following policy as shown in the image below:
+      <h4>JSON for policy</h4>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Effect": "Allow",
+          "Action": [
+              "s3:GetObject"
+          ],
+          "Resource": [
+          <span class="bcls-highlight">"arn:aws:s3:::reports.wicketlabs.com/*"</span>
+          ]
+      },
+      {
+          "Effect": "Allow",
+          "Action": "s3:ListBucket",
+          "Resource": <span class="bcls-highlight">"arn:aws:s3:::reports.wicketlabs.com"</span>
+      }
+  ]
+}</code></pre>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/create-policy-json.webp" alt="Paste JSON into Policy Editor">
+        <figcaption class="bcls-caption--image">Paste JSON into Policy Editor</figcaption>
+      </figure>
+    </li>
+    <li>
+      Name the policy, add a description, and create the policy:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/review-and-create-policy.webp" alt="Add Name/Description">
+        <figcaption class="bcls-caption--image">Add Name/Description</figcaption>
+      </figure>
+    </li>
+  </ol>
+  <h3>Attach policy to users</h3>
 </section>
