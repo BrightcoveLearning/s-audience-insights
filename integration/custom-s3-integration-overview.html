@@ -1,0 +1,16 @@
+<section class="bcls-section">
+  <h2 id="Overview">Overview</h2>
+  <p>When you set up an integration with S3, data reports are automatically exported to an S3 bucket on your AWS account and available to be viewed or downloaded from there.</p>
+
+  {% if site.product_name == 'Audience Insights' %}
+  <p>From Audience Insights, you can manually generate reports. If an S3 integration is set up, they can publish any of these reports to S3. You can also add users who can view/download the reports by applying the policy described below to other AWS users.</p>
+  {% endif %}
+  <p>The reports will be exported to S3 on a daily or weekly basis, according to the schedule you set up, and will be available to those you given access by an admin on your AWS account (steps are shown below).</p>
+  <h3>Requirements</h3>
+  <ul>
+    <li>You must have an AWS account</li>
+    {% if site.product_name == 'Audience Insights' %}
+    <li>You must be an admin on a full Audience Insights account to set up the integration in Audience Insights</li>
+    {% endif %}
+  </ul>
+</section>

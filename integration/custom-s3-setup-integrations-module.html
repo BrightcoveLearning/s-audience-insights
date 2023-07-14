@@ -1,0 +1,74 @@
+{% if site.product_name != 'Audience Insights' %}
+<section class="bcls-section">
+  <h2 id="integration_setup">Integration setup</h2>
+  <p>Follow the steps below to set up the integration to your S3 bucket.</p>
+  <ol class="bcls-tasklist-restart">
+    <li>Login to Studio.</li>
+    <li>
+      Use the left navigation to go to the Integrations module:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integrations-module-home.webp" alt="Go to Integrations Module">
+        <figcaption class="bcls-caption--image">Go to Integrations Module</figcaption>
+      </figure>
+    </li>
+    <li>
+      Click <strong>Customer Data Platforms</strong> to open it:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/customer-data-platforms-home.webp" alt="Custom Data Platforms Home">
+        <figcaption class="bcls-caption--image">Custom Data Platforms Home</figcaption>
+      </figure>
+    </li>
+    <li>Click <span class="button-blue">Add Integration</span></li>
+    <li>
+      Select Custom S3 from the <strong>Destination</strong> dropdown:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/select-s3-custom.webp" alt="Destination Dropdown">
+        <figcaption class="bcls-caption--image">Destination Dropdown</figcaption>
+      </figure>
+    </li>
+    <li>
+      In the Add Integration dialog, enter your AWS access key and secret access key, S3 path, choose daily or weekly report exports, and enter one or more email addresses to be notified in case of export errors:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/add-integration-dialog-custom-s3.webp" alt="Add Integration Dialog">
+        <figcaption class="bcls-caption--image">Add Integration Dialog</figcaption>
+      </figure>
+      <aside class="bcls-aside bcls-aside--information language-editable">If you are not sur how to generate/find the AWS information, consult the <a href="https://docs.aws.amazon.com/index.html">AWS Documentation</a>.</aside>
+    </li>
+    <li>Click <span class="button-blue">Save</span> to create the integration.</li>
+  </ol>
+  <p>Note that you can edit the integration details later by returning the Customer Data Services home page and clicking the <img src="/assets/images/s-integrations-img/customer-data-playforms/s3/edit-icon.webp" alt="Edit Icon">.</p>
+</section>
+{% elsif site.product_name == 'Audience Insights' %}
+<!-- I don't have the screenshots to do this part now -->
+<!-- <section class="bcls-section">
+  <h2 id="Setup_in_Audience_Insights">Integration setup in Audience Insights</h2>
+  <aside class="bcls-aside bcls-aside--information language-editable">Note: to set up this integration in Audience Insights, you must have a full Audience Insights account and be an admin for the account. Otherwise, set up the integration in the <a href="https://studio.support.brightcove.com/integrations/integrations-module/customer-data-platforms/integration-s3.html">Studio Integrations Module</a>.</aside>
+  <ol class="bcls-tasklist-restart">
+    <li>
+      Log in to the Scorecard and click the “gear” icon at the top right and then click “Settings”:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/scorecard-gear-icon.webp" alt="Scorecard Settings">
+        <figcaption class="bcls-caption--image">Scorecard Settings</figcaption>
+      </figure>
+    </li>
+    <li>
+      Scroll down until you see “Publish Integrations”. Click “+” to add integration. Choose “S3”:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/add-integration.webp" alt="Publish Integrations">
+        <figcaption class="bcls-caption--image">Publish Integrations</figcaption>
+      </figure>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/select-s3.webp" alt="Add S3 Integration">
+        <figcaption class="bcls-caption--image">Add S3 Integration</figcaption>
+      </figure>
+    </li>
+    <li>
+      Fill in the form with your AWS account Id, the publish frequency, and a contact email address which will receive a note if the publish process fails. Click “Create”.
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/new-publishing-integration.webp" alt="Add Publishing Integration Dialog">
+        <figcaption class="bcls-caption--image">Add Publishing Integration Dialog</figcaption>
+      </figure>
+    </li>
+  </ol>
+</section> -->
+{% endif %}
