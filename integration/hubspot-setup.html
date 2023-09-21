@@ -1,38 +1,104 @@
 <section class="bcls-section">
-  <h2 id="add_publish_integration">Add Publish Integration</h2>
-  <ol class="bcls-tasklist-restart">
-    <li>From a logged in Audience Insights scorecard, navigate to the <strong>Settings</strong> page.</li>
-    <li>
-      Scroll down to the Publish Integrations section and click <strong>Add Integration</strong>:
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/audience-insights-publish-integration-setup/add-integration.webp" alt="Add Integration">
-        <figcaption class="bcls-caption--image">Add Integration</figcaption>
-      </figure>
-    </li>
-    <li>
-      In the modal dialog, select Salesforce from the Destination dropdown:
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/audience-insights-publish-integration-setup/add-integration-dialog.webp" alt="Add Integration Dialog">
-        <figcaption class="bcls-caption--image">Add Integration Dialog</figcaption>
-      </figure>
-    </li>
-    <li>
-      Fill out the form with the values that were created when setting up the Connected App.
-      <ul>
-        <li>The Consumer Key and Consumer Secret will be the values from the Manage Consumer Details section of the Salesforce connected app.</li>
-        <li>The Automated Export option controls how often there should be an automated publish to the Salesforce integration.</li>
-      </ul>
-    </li>
-    <li>
-      Clicking <strong>Create</strong> will redirect the user to Salesforce. If they are not logged in already, they will be prompted to log into Salesforce. There will be a prompt from within Salesforce asking the user to authorize access for the application. If they accept, they will be redirected back to the scorecard.
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/audience-insights-publish-integration-setup/allow-access-to-sf.webp" alt="Authorize in Salesforce">
-        <figcaption class="bcls-caption--image">Authorize in Salesforce</figcaption>
-      </figure>
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/audience-insights-publish-integration-setup/integration-successful.webp" alt="Integration Successful">
-        <figcaption class="bcls-caption--image">Integration Successful</figcaption>
-      </figure>
-    </li>
+  <h2 id="requeriments">Requirements</h2>
+  <ul>
+      <li>Being an user with the <em>admin</em> role in Audience Insights.</li>
+      <li>Have a HubSpot account. </li>
+      <li>Create a private app in your HubSpot account.</li>
+      <li>Have a HubSpot user with <a href="https://knowledge.hubspot.com/settings/hubspot-user-permissions-guide#super-admin">Super admin</a> permissions to create new private apps.</li>
+  </ul>
+</section>
+
+<section class="bcls-section">
+  <h2 id="set-up-hubspot">HubSpot Private App Setup</h2>
+  <p>To set up your HubSpot Private App, follow these steps:</p>
+  <ol class="bcls-tasklist">
+      <li>Log in to your HubSpot account.</li>
+      <li> Click <strong>settings </strong>icon in the main navigation bar.
+          <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/hubspot/hubspot-step1.webp" alt="hubspot Steps">
+              <figcaption class="bcls-caption--image">Set private app</figcaption>
+            </figure>
+      </li>
+      <li>In the left sidebar menu, navigate to <strong>Integrations > Private Apps</strong> and click <strong>Create a private app</strong>.
+          <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/hubspot/hubspot-step2.webp" alt="Create New API Key">
+              <figcaption class="bcls-caption--image">App details</figcaption>
+            </figure>
+      </li> 
+      <li>On the <strong>Basic Info</strong> tab, configure the details of the app.  The name is required and can be anything you like as long as it is unique within your HubSpot account.  The logo and description are optional.
+          <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/hubspot/hubspot-step3.webp" alt="User Track">
+              <figcaption class="bcls-caption--image">App scopes</figcaption>
+            </figure>
+      </li>
+      <li>Click the <strong>Scopes</strong> tab and select the <em>Read</em> and <em>Write</em> options for the <code>crm.objects.contacts</code> and <code>crm.schemas.contacts</code> items under the <strong>CRM</strong> section.  Also select the <em>Request</em> option for the <code>oauth</code> item under the <strong>Standard</strong> section.  
+          <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/hubspot/hubspot-step4.webp" alt="User Track">
+              <figcaption class="bcls-caption--image">Select scope</figcaption>
+            </figure>
+      </li>
+      <li>Click <strong>Create app</strong> in the upper right hand corner of the screen. </li>
+      <li>In the dialog box, review the info about your app's access token, then click <strong>Continue creating</strong>.
+          <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/hubspot/hubspot-step5.webp" alt="User Track">
+              <figcaption class="bcls-caption--image">Confirm App</figcaption>
+            </figure>
+      </li>
+      <li>Once you have created the app, you will see a dialog which contains the unique <strong>token</strong> for the private app.  Click <strong>Copy</strong>. You will need to enter this value when adding the HubSpot Publish Integration.
+          <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/hubspot/hubspot-step6.webp" alt="User Track">
+              <figcaption class="bcls-caption--image">App token</figcaption>
+            </figure>
+      </li>
+
   </ol>
+  </section>
+  <section class="bcls-section">
+      <h2 id="add-pblish-integration">Add Publish Integration</h2>
+  <p>To publish a HubSpot integration from audience insights, follow these steps:</p>
+
+  <ol class="bcls-tasklist-restart">
+      <li>Login to Video Cloud Studio.</li>
+      <li>Open the Integrations module.</li>
+      <li>Click <strong>Customer Data Platforms.</strong>
+          <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/hubspot/hubspot-step7.webp" alt="User Track">
+              <figcaption class="bcls-caption--image">Integrations module</figcaption>
+            </figure>
+      </li>
+      <li>Click <span class="button-blue">Add Integrations</span> or click <span class="button-blue-text">Connect customer data platform</span>.</li>
+      <li>Select <strong>HubSpot</strong> from the Destination dropdown.
+          <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/hubspot/hubspot-step8.webp" alt="User Track">
+              <figcaption class="bcls-caption--image">HubSpot Integration</figcaption>
+            </figure>
+      </li>
+      <li>Fill out the form with the Access Token from the HubSpot Private App.
+      </li>
+      <li>You can choose either Customer Id or Email field to connect accounts from Audience Insights with HubSpot.</li>
+      <li>Notice that the automated export option controls how often it is published to the HubSpot integration.</li>
+      <li>Click <span class="button-blue">Save</span>.</li>
+  </ol>
+</section>
+<section class="bcls-section">
+  <h2 id="supported-properties">Supported Properties</h2>
+  <p>Properties are used to collect and store information about your contacts in HubSpot.</p>
+  <ol class="bcls-tasklist-restart">
+      <li>Click the <strong>Integration Properties</strong> tab and choose which attributes are active and should be synchronized to HubSpot.
+          <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/hubspot/hubspot-properties-step1.webp" alt="User Track">
+              <figcaption class="bcls-caption--image">HubSpot properties</figcaption>
+            </figure>
+      </li>
+      <p>The custom properties can be viewed in HubSpot</p>
+      <li>Click <strong>settings</strong> icon</li>  
+      
+      <li>Find <strong>Data Management > Properties</strong> in the left sidebar menu. You can see the specific attributes from Audience Insights by filtering the properties in the Wicket Labs group.
+          <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/hubspot/hubspot-properties-step2.webp" alt="User Track">
+              <figcaption class="bcls-caption--image">HubSpot Dashboard</figcaption>
+            </figure>
+      </li>
+  </ol>
+  
 </section>
