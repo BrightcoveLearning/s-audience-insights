@@ -14,5 +14,50 @@
     </ul>
 </section>
 <section class="bcls-section">
-    <h2 id="setup-process">Setup Process</h2>
+    <h2 id="create-a-marketo-web-service">Create a Marketo Web Service</h2>
+    <p>A web service must be created in the Marketo to obtain API credentials so that you can make authenticated calls to the Marketo instance.</p>
+    <ol class="bcls-tasklist">
+        <li>
+            In Marketo, navigate to the <strong>Admin menu</strong>, and Click <strong>Users and Roles</strong>.
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/admin-users.webp" alt="admin-users">
+            </figure>
+        </li>
+        <li>
+            Select the <strong>Roles</strong> tab and Click on <strong>New Role</strong>. <br> Assign the following API permissions:
+            <p></p>
+            <ul>
+                <li>Read-Only Assets</li>
+                <li>Read-Write Custom Object</li>
+                <li>Read-Write Custom Object Type</li>
+                <li>Read-Write Lead</li>
+            </ul>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/api-permissions.webp" alt="admin-users">
+            </figure>
+        </li>
+        <li>
+            Select the <strong>Users</strong> tab and Click <strong>Invite New User</strong>. <br> Enter the required fields and Click <strong>Next</strong>.
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/new-user.webp" alt="new-user">
+            </figure>
+        </li>
+        <li>
+            Select the API Only option, Choose the Role you created in the previous step and click <strong>Next</strong>.
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/api-only.webp" alt="api-only">
+            </figure>
+        </li>
+        <li>
+            Click <strong>Send</strong>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/send.webp" alt="send">
+            </figure>
+            <aside class="bcls-aside bcls-aside--information language-editable">Since you are creating an API only user, no email invitation is actually sent.</aside>
+        </li>
+        <li>Go back to the <strong>Admin</strong> menu and Click <strong>Launchpoint</strong>.</li>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/launchpoint.webp" alt="launchpoint">
+        </figure>
+    </ol>
 </section>
