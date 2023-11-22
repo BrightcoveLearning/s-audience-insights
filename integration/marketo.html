@@ -86,3 +86,68 @@
         </li>
     </ol>
 </section>
+<section class="bcls-section">
+    <h2 id="audience-insights-publish-integration-setup">Audience Insights Publish Integration Setup</h2>
+    <p>Once the web service has been created in the Marketo instance, a publish integration can be added to the Audience Insights system.</p>
+    <h3>Requirements</h3>
+    <ul>
+        <li>User with the 'admin' role in the Audience Insights scorecard</li>
+        <li>Marketo account</li>
+        <li>Marketo Web Service installed in Marketo instance</li>
+    </ul>
+    <h3>Add Publish Integration</h3>
+    <ol class="bcls-tasklist-restart">
+        <li>Log in to <strong>Video Cloud Studio.</strong></li>
+        <p></p>
+        <li>Open the <strong>Integrations</strong> module.</li>
+        <p></p>
+        <li>
+        Click <strong>Customer Data Platforms</strong>
+        <p></p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/eloqua/customer-data-platforms.webp" alt="customer-data-platforms">
+        </figure>
+        </li>
+        <p></p>
+        <li>Click <span class="button-blue">Add Integration</span></li>
+        <p></p>
+        <li>
+            Select <strong>Marketo</strong> from the Destination dropdown. <br> Fill out the <strong>Form</strong> and Click <span class="button-blue">Save</span>
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/marketo-select.webp" alt="marketo-select">
+            </figure>
+            <!-- <aside class="bcls-aside bcls-aside--information language-editable"> -->
+                <p>Please note:</p>
+                <ul>
+                    <li>The Client ID, Client Secret, API Endpoint URL and API Identity URL are all obtained from Marketo when creating the Web Service.</li>
+                    <li>The Customer identifier can be selected as either Customer Id or Email (for Audience Insights) or just Customer Id for Videocloud.</li>
+                    <li>The Automated Export option controls how often there should be an automated publish to the Marketo integration.</li>
+                </ul>
+            <!-- </aside> -->
+          </li>
+          <p></p>
+    </ol>
+</section>
+<section class="bcls-section">
+    <h2 id="viewing-custom-object-fields">Viewing lead custom object fields in Marketo</h2>
+    <p>Marketo custom objects are used to track additional attributes for leads.  This publish integration creates a custom object in Marketo named Brightcove that includes fields for all of the integration properties which are selected to be published.</p>
+    <p>The specific attributes can be selected on the configuration modal for the Marketo Publish Integration in the Audience Insights settings page.  Click the Integration Properties tab and choose which attributes are active and should be synchronized to Marketo. </p>
+    <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/properties.webp" alt="properties">
+    </figure>
+    <aside class="bcls-aside bcls-aside--information language-editable">The custom object fields are automatically created by the Marketo publish integration and do not need to be manually created in Marketo.<br> Please note - if a field is created (because it is in the Active column above) and later unselected (and moved to the Inactive column), the custom object field is not deleted from Marketo.</aside>
+    <p>To view these fields follow the next process:</p>
+    <ol class="bcls-tasklist-restart">
+        <li>
+            Marketo from the Admin menu by navigating to Database Management > Marketo Custom Objects and clicking on the Brightcove Integration custom object.
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/custom-object.webp" alt="custom-object">
+            </figure>
+        </li>
+        <li>
+            Fields tab 
+            Click on the Fields tab to view all fields that have been defined for the Brightcove Integration custom object.
+        </li>
+
+    </ol>
+</section>
