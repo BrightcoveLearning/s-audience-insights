@@ -3,7 +3,7 @@
     <p>Audience Insights generates daily data at the user level for subscription-based accounts and accounts that do not require a subscription.</p>
     <p>These values can be transferred to your Marketo application using this integration.</p>
     <p></p>
-    <aside class="bcls-aside bcls-aside--information language-editable">Publish integrations can only update users that exist in both systems. It will not create new contacts in Marketo. You can align users using their email or Contact ID.</aside>
+    <aside class="bcls-aside bcls-aside--information language-editable">Publish integrations can only update users that exist in both systems. It will not create new contacts in Marketo. <br> You can align users using their email or Contact ID.</aside>
 </section>
 <section class="bcls-section">
     <h2 id="Requirements" >Requirements</h2>
@@ -15,10 +15,11 @@
 </section>
 <section class="bcls-section">
     <h2 id="create-a-marketo-web-service">Create a Marketo Web Service</h2>
-    <p>A web service must be created in the Marketo to obtain API credentials so that you can make authenticated calls to the Marketo instance.</p>
+    <p>A web service in Marketo is required to obtain API credentials and communicate with this instance.</p>
     <ol class="bcls-tasklist">
         <li>
             In Marketo, navigate to the <strong>Admin menu</strong> and Click <strong>Users and Roles</strong>.
+            <p></p>
             <figure class="bcls-figure">
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/admin-users.webp" alt="admin-users">
             </figure>
@@ -32,54 +33,65 @@
                 <li>Read-Write Custom Object Type</li>
                 <li>Read-Write Lead</li>
             </ul>
+            <p></p>
             <figure class="bcls-figure">
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/api-permissions.webp" alt="admin-users">
             </figure>
         </li>
         <li>
             Select the <strong>Users</strong> tab and Click <strong>Invite New User</strong>. <br> Enter the required fields, and Click <strong>Next</strong>.
+            <p></p>
             <figure class="bcls-figure">
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/new-user.webp" alt="new-user">
             </figure>
         </li>
         <li>
-            Select the API-Only option, Choose the Role you created in the previous step and Click <strong>Next</strong>.
+            Select the API-Only option, Choose the Role you created in the previous step, and Click <strong>Next</strong>.
+            <p></p>
             <figure class="bcls-figure">
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/api-only.webp" alt="api-only">
             </figure>
         </li>
         <li>
             Click <strong>Send</strong>
+            <p></p>
             <figure class="bcls-figure">
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/send.webp" alt="send">
             </figure>
             <aside class="bcls-aside bcls-aside--information language-editable">Since you are creating an API-only user. No email invitation is actually sent.</aside>
         </li>
         <li>Go back to the <strong>Admin</strong> menu and Click <strong>Launchpoint</strong>.</li>
+        <p></p>
         <figure class="bcls-figure">
             <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/launchpoint.webp" alt="launchpoint">
         </figure>
         <li>
             Click on the <strong>New menu</strong> and select <strong>New Service</strong>. <br> Enter the required fields, choosing <strong>Custom</strong> for the Service and the <strong>API-Only User</strong> created in the previous step.<br> Click <strong>Create</strong>.
+            <p></p>
             <figure class="bcls-figure">
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/new-service.webp" alt="new-service">
             </figure>
         </li>
         <li>
             Click <strong>View Details</strong> for your new service to view the <strong>Client ID and Client Secret</strong>. 
+            <p></p>
             <aside class="bcls-aside bcls-aside--warning language-editable">Make sure to save these credentials since you will need to enter both values when adding the <strong>Marketo publish integration</strong>.</aside>
+            <p></p>
             <figure class="bcls-figure">
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/credentials.webp" alt="credentials">
             </figure>
         </li>
         <li>Back on the <strong>Admin</strong> menu, Click <strong>Web Services</strong>.
+            <p></p>
             <figure class="bcls-figure">
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/web-services.webp" alt="web-services">
             </figure>
         </li>
         <li>
             Locate the <strong>Endpoint</strong> in the <strong>REST API</strong> box.
+            <p></p>
             <aside class="bcls-aside bcls-aside--warning language-editable">Make sure to save the Endpoint and Identity URLs. You will also need these values when adding the Marketo publish integration.</aside>
+            <p></p>
             <figure class="bcls-figure">
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/rest-api.webp" alt="rest-api">
             </figure>
@@ -107,6 +119,7 @@
         <p></p>
         <li>
             Select <strong>Marketo</strong> from the Destination dropdown. <br> Fill out the Form and Click <span class="button-blue">Save</span>
+            <p></p>
             <figure class="bcls-figure">
               <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/marketo-select.webp" alt="marketo-select">
             </figure>
@@ -124,29 +137,37 @@
 <section class="bcls-section">
     <h2 id="viewing-custom-object-fields">Viewing lead custom object fields in Marketo</h2>
     <p>This publish integration aims to create a custom object in Marketo named Brightcove that includes fields for the desired integration properties.</p>
-    <p>To select these fields, navigate to the Integration Properties tab.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">To select these fields, navigate to the Integration Properties tab.</aside>
+    <p></p>
     <figure class="bcls-figure">
         <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/properties.webp" alt="properties">
     </figure>
+    <br>
     <aside class="bcls-aside bcls-aside--information language-editable">The custom object fields are automatically created by the Marketo publish integration and do not need to be manually created in Marketo.<br><br> If a field is selected and later unselected (and moved to the Inactive column), the custom object field is not deleted from Marketo.</aside>
-    <p>To view the selected fields, follow the next process:</p>
+    <br>
+    <h3>To view the selected fields, follow the next process:</h3>
+    <br>
     <ol class="bcls-tasklist-restart">
         <li>
             From the <strong>Admin menu</strong> in Marketo, navigate to Database Management -> Marketo Custom Objects and Click on the <strong>Brightcove Integration</strong> custom object.
+            <p></p>
             <figure class="bcls-figure">
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/custom-object.webp" alt="custom-object">
             </figure>
         </li>
+        <br>
         <li>
             Click on the Fields tab to view all fields that have been defined for the Brightcove Integration custom object.
+            <p></p>
             <figure class="bcls-figure">
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/fields.webp" alt="fields">
             </figure>
+            <br>
+            <aside class="bcls-aside bcls-aside--information language-editable">Be sure to select Brightcove integration in the Select Object box so that all fields will be displayed.</aside>
+            <p></p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/brightcove-fields.webp" alt="brightcove-fields">
+            </figure>
         </li>
-        <aside class="bcls-aside bcls-aside--information language-editable">Be sure to select Brightcove integration in the Select Object box so that all fields will be displayed.</aside>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/brightcove-fields.webp" alt="brightcove-fields">
-        </figure>
-
     </ol>
 </section>
