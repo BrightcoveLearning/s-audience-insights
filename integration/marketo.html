@@ -172,3 +172,41 @@
         </li>
     </ol>
 </section>
+<section class="bcls-section">
+    <h2 id="switching_account_types_in_audience_insights" >Switching account types in Audience Insights</h2>
+    <aside class="bcls-aside bcls-aside--warning language-editable">If you need to switch account types in Audience Insights, e.g., from SVOD to TVE, you should also delete any existing Marketo integrations and create a new one under the new account type.</aside>
+
+    <aside class="bcls-aside bcls-aside--information language-editable">The integration properties for Marketo are unique to an account type. Attempting to add all integration properties for both account types will result in validation errors from Marketo.</aside>
+    <p>In order to switch accounts and re-establish integrations successfully with the new account type, delete the existing integration by following the steps below:</p>
+    <h3 id="delete_publish_integration">Delete Publish Integration</h3>
+    <p></p>
+    <ol class="bcls-tasklist-restart">
+        <li>Log in to <strong>Video Cloud Studio</strong></li>
+        <li>Open the <strong>Integrations</strong> module</li>
+        <li>
+            Click <strong>Customer Data Platforms</strong>
+            <p></p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/eloqua/customer-data-platforms.webp" alt="customer-data-platforms">
+            </figure>
+            <p></p>
+        </li>
+        <li>
+            On the row for the Marketo integration, Click <strong>Disconnect</strong> (the trash icon)
+            <p></p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/disconnect.webp" alt="fields">
+            </figure>
+            <p></p>
+        </li>
+        <li>
+            Type “DELETE” in the text box and Click <strong>Delete</strong>
+            <p></p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/delete.webp" alt="fields">
+            </figure>
+            <p></p>
+        </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--warning language-editable">Deleting a Marketo integration in Audience Insights will also delete all data associated with that integration in Marketo.</aside>
+</section>
