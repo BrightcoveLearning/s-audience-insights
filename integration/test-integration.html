@@ -1,8 +1,81 @@
 <section class="bcls-section">
     <h2 id="Overview" >Overview</h2>
-    <p>test</p>
-    <figure class="bcls-figure">
+    <p></p>
+    <p>The Test Integration feature for Contact Integrations allows you to verify the connection between Brightcove and your Marketing Automation Platform (MAP). It provides feedback on errors to help identify issues and ensures successful test data visibility in the MAP.</p>
+    <!--<figure class="bcls-figure">
         <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/eloqua/customer-data-platforms.webp">
-    </figure>
-    <aside class="bcls-aside bcls-aside--information language-editable">Publish integrations can only update users that exist in both systems. It will not create new contacts in Eloqua. You can align users using their email or the Eloqua Contact ID.</aside>
+    </figure>-->
+</section>
+
+<section class="bcls-section"></section>
+    <h2 id="requirements" >Requirements</h2>
+    <p></p>
+    <ul>
+        <li>You must have video view data in Brightcove</li>
+        <li>Video views must be <a href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/index.html">attributed to a <strong>Viewer</strong></a></li>
+        <li>For certain integrations, you must have existing Contacts in your MAP instances
+            <aside class="bcls-aside bcls-aside--information language-editable">Each MAP has a different process for adding these objects, please refer to your integration's documentation for details</aside>
+        </li>
+    </ul>
+</section>
+
+<section class="bcls-section"></section>
+    <h2 id="customerid_viewertoken" >Customer ID and Viewer Token</h2>
+    <p>Customer ID is the identifier for a Contact in the MAP instance, while Viewer Tokens are used to track video views when Lead Forms create Contacts. Viewer Tokens are later translated to Customer IDs to attribute the data to the correct Contact in the MAP.</p>
+</section>
+
+<section class="bcls-section">
+    <h2 id="testing">Testing Integrations: </h2>
+    <h4>Braze</h4>
+    <p></p>
+    <h5>Find Contact ID</h5>
+    <p></p>
+    <ol class="bcls-tasklist">
+        <li>Log into Braze</li>
+        <li>In the left side bar, hover over Audience</li>
+        <li>Click Search Users</li>
+        <li>Search for a user by email, alias, external ID, etc</li>
+        <li>The Contact ID will be the User ID be in the top card
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/brazeid.webp">
+            </figure>
+        </li>
+    </ol>
+    <p></p>
+    <h5>Setup Test</h5>
+    <p></p>
+    <ol class="bcls-tasklist-restart">
+        <li>Click Test Integration icon</li>
+        <li>Set Contact to a Contact ID</li>
+        <li>Click <strong>Start test</strong></li>
+    </ol>
+</section>
+
+<section class="bcls-section">
+    <h4>Eloqua</h4>
+    <p></p>
+    <h5>Find Contact ID</h5>
+    <p></p>
+    <ol class="bcls-tasklist-restart">
+        <li>Log into Eloqua</li>
+        <li>Hover over the ID card icon in the top navigation bar</li>
+        <li>Click Contacts</li>
+        <li>In the search bar, search for a contact, e.g. by email</li>
+        <li>Double click on the contact in the table</li>
+        <li>Click Field Details</li>
+        <li>In the dropdown box, select All Contact Fields</li>
+        <li>The Contact ID will be the Eloqua Contact ID
+            <figure class="bcls-figure"></figure>
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/eloquaid.webp">
+            </figure>
+        </li>
+    </ol>
+    <p></p>
+    <h5>Setup Test</h5>
+    <p></p>
+    <ol class="bcls-tasklist-restart">
+        <li>Click Test Integration icon</li>
+        <li>Set Contact to a Contact ID</li>
+        <li>Click <strong>Start test</strong></li>
+    </ol>
 </section>
