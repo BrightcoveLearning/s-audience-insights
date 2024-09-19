@@ -40,7 +40,10 @@
         </li>
     </ol>
 
+    <p></p>
     <h3>Eloqua</h3>
+    <p></p>
+    <h5>Find Contact ID</h5>
     <p></p>
     <ol class="bcls-tasklist-restart">
         <li>Log into Eloqua</li>
@@ -56,7 +59,89 @@
             </figure>
         </li>
     </ol>
+
+    <p></p>
+    <h3>Hubspot</h3>
+    <p></p>
+    <h5>Find Contact ID</h5>
+    <p></p>
+    <ol class="bcls-tasklist-restart">
+        <li>Log into Hubspot</li>
+        <li>In the right navigation bar, hover over CRM</li>
+        <li>Click Contacts</li>
+        <li>In the search bar, search for a contact, e.g. by email</li>
+        <li>The Contact ID will be at the end of the URL.
+            <figure class="bcls-figure"></figure>
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/hubspot-id.webp">
+            </figure>
+        </li>
+    </ol>
+
+    <p></p>
+    <h3>Marketo</h3>
+    <p></p>
+    <h5>Find Contact ID</h5>
+    <p></p>
+    <ol class="bcls-tasklist-restart">
+        <li>Log into Marketo</li>
+        <li>In the top navigation bar, click Database</li>
+        <li>In the search bar, search for a contact, e.g. by email</li>
+        <li>In the search bar, search for a contact, e.g. by email</li>
+        <li>The Contact ID will be in the Id column of the Leads table.
+            <figure class="bcls-figure"></figure>
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/marketo-id.webp">
+            </figure>
+        </li>
+        <aside class="bcls-aside bcls-aside--tip language-editable">Also note the Created date.</aside>
+    </ol>
+
+    <p></p>
+    <h3>S3</h3>
+    <p></p>
+    <h5>Find Contact ID</h5>
+    <p></p>
+    <ol class="bcls-tasklist-restart">
+        <li>Log into Brightcove Video Cloud</li>
+        <li>In the left navigation bar, click the Analytics module</li>
+        <li>In the left navigation bar, click Perfomance</li>
+        <li>Group by Viewer</li>
+        <li>Pick a Contact ID from the Viewer column
+            <figure class="bcls-figure"></figure>
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/s3-id.webp">
+            </figure>
+        </li>
+    </ol>
+
+    <p></p>
+    <h3>Salesforce</h3>
+    <p></p>
+    <h5>Find Contact ID</h5>
+    <p></p>
+    <ol class="bcls-tasklist-restart">
+        <li>Log into Salesforce</li>
+        <li>In the top navigation bar, click Contacts.</li>
+        <li>Click a contact in the table.</li>
+        <li>The Contact ID will be in the URL, after "/Contact/"
+            <figure class="bcls-figure"></figure>
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/salesforce-id.webp">
+            </figure>
+        </li>
+    </ol>
 </section>
+
+<section class="bcls-section">
+    <h2 id="viewer_token">Find Viewer Token</h2>
+    <p></p>
+    <ol class="bcls-tasklist-restart">
+        <li>Create a <a href="https://studio.support.brightcove.com/publish/general/step-step-using-players-module-create-and-publish-player.html">Brightcove Player</a> with <strong>Viewer Tracking and Lead Form for "Eloqua, hubspot... etc..."</strong> enabled.</li>
+        <li>Play the video</li>
+        <li>Create a Contact with the Lead Form</li>
+        <li>Right click on the Player</li>
+        <li>Click Player Information</li>
+        <li>The Viewer Token will be shown as "Viewer ID"</li>
+    </ol>
+</section>
+
 <section class="bcls-section">
     <h2 id="test">Setup Test</h2>
     <p></p>
@@ -76,6 +161,12 @@
             <figure class="bcls-figure"></figure>
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/start-test.webp">
             </figure>
+            <aside class="bcls-aside bcls-aside--warning language-editable">If you are using Marketo, Set Start Date to a few days before the Created date of the target Contact.</aside>
         </li>
     </ol>
+</section>
+
+<section class="bcls-section">
+    <h2 id="troubleshooting">Troubleshooting</h2>
+    <p></p>
 </section>
