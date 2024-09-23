@@ -13,15 +13,16 @@
     <ul>
         <li>You must have video view data in Brightcove</li>
         <li>Video views must be <a href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/index.html">attributed to a <strong>Viewer</strong></a></li>
-        <li>For certain integrations, you must have existing Contacts in your MAP instances
-            <aside class="bcls-aside bcls-aside--information language-editable">Each MAP has a different process for adding these objects, please refer to your integration's documentation for details</aside>
-        </li>
+        <li>For certain integrations, you must have existing Contacts in your MAP instances</li>
+        <p></p>
+        <aside class="bcls-aside bcls-aside--information language-editable">Each MAP has a different process for adding these objects; please refer to your integration's documentation for details</aside>
     </ul>
 </section>
 
 <section class="bcls-section"></section>
     <h2 id="customerid_viewertoken" >Customer ID and Viewer Token</h2>
-    <p>Customer ID is the identifier for a Contact in the MAP instance, while Viewer Tokens are used to track video views when Lead Forms create Contacts. Viewer Tokens are later translated to Customer IDs to attribute the data to the correct Contact in the MAP.</p>
+    <p></p>
+    <p>Customer ID is the identifier for a contact in the MAP instance, while Viewer Tokens are used to track video views when Lead Forms create Contacts. Viewer Tokens are later translated to Customer IDs to attribute the data to the correct contact in the MAP.</p>
 </section>
 
 <section class="bcls-section">
@@ -33,7 +34,7 @@
         <li>In the left side bar, hover over Audience</li>
         <li>Click Search Users</li>
         <li>Search for a user by email, alias, external ID, etc</li>
-        <li>The Contact ID will be the User ID be in the top card
+        <li>The Contact ID will be the User ID be on the top card
             <figure class="bcls-figure">
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/brazeid.webp">
             </figure>
@@ -50,7 +51,7 @@
         <li>Hover over the ID card icon in the top navigation bar</li>
         <li>Click Contacts</li>
         <li>In the search bar, search for a contact, e.g. by email</li>
-        <li>Double click on the contact in the table</li>
+        <li>Double-click on the contact in the table</li>
         <li>Click Field Details</li>
         <li>In the dropdown box, select All Contact Fields</li>
         <li>The Contact ID will be the Eloqua Contact ID
@@ -92,7 +93,7 @@
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/marketo-id.webp">
             </figure>
         </li>
-        <aside class="bcls-aside bcls-aside--tip language-editable">Also note the Created date.</aside>
+        <aside class="bcls-aside bcls-aside--tip language-editable">Also, note the Created date.</aside>
     </ol>
 
     <p></p>
@@ -103,7 +104,7 @@
     <ol class="bcls-tasklist-restart">
         <li>Log into Brightcove Video Cloud</li>
         <li>In the left navigation bar, click the Analytics module</li>
-        <li>In the left navigation bar, click Perfomance</li>
+        <li>In the left navigation bar, click Performance</li>
         <li>Group by Viewer</li>
         <li>Pick a Contact ID from the Viewer column
             <figure class="bcls-figure"></figure>
@@ -121,7 +122,7 @@
         <li>Log into Salesforce</li>
         <li>In the top navigation bar, click Contacts.</li>
         <li>Click a contact in the table.</li>
-        <li>The Contact ID will be in the URL, after "/Contact/"
+        <li>The Contact ID will be in the URL after "/Contact/"
             <figure class="bcls-figure"></figure>
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/salesforce-id.webp">
             </figure>
@@ -136,7 +137,7 @@
         <li>Create a <a href="https://studio.support.brightcove.com/publish/general/step-step-using-players-module-create-and-publish-player.html">Brightcove Player</a> with <strong>Viewer Tracking and Lead Form for "Eloqua, hubspot... etc..."</strong> enabled.</li>
         <li>Play the video</li>
         <li>Create a Contact with the Lead Form</li>
-        <li>Right click on the Player</li>
+        <li>Right-click on the Player</li>
         <li>Click Player Information</li>
         <li>The Viewer Token will be shown as "Viewer ID"</li>
     </ol>
@@ -152,7 +153,7 @@
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/customer-platforms.webp">
             </figure>
         </li>
-        <li>Click Test Integration icon for your desired integration.
+        <li>Click the Test Integration icon for your desired integration.
             <figure class="bcls-figure"></figure>
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/test-icon.webp">
             </figure>
@@ -161,7 +162,7 @@
             <figure class="bcls-figure"></figure>
                 <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/start-test.webp">
             </figure>
-            <aside class="bcls-aside bcls-aside--warning language-editable">If you are using Marketo, Set Start Date to a few days before the Created date of the target Contact.</aside>
+            <aside class="bcls-aside bcls-aside--warning language-editable">If you are using Marketo, Set the Start Date to a few days before the Created date of the target Contact.</aside>
         </li>
     </ol>
 </section>
@@ -169,4 +170,43 @@
 <section class="bcls-section">
     <h2 id="troubleshooting">Troubleshooting</h2>
     <p></p>
+    <h3>Unable to Authenticate with Vendor</h3>
+    <p></p>
+    <ul>
+        <li>Confirm that the credentials provided are correct</li>
+        <li>The customer can test their credentials by manually calling the MAP-specific API</li>
+    </ul>
+
+    <p></p>
+    <h3>Contact Does Not Exist in MAP</h3>
+    <p></p>
+    <ul>
+        <li>Confirm that the target Contact exists in the MAP instance and that the correct ID is being provided</li>
+        <li>Refer to the Supported Integrations section above to see how to find the ID in the MAP instance</li>
+        <li>If the integration uses Viewer Token, confirm that the Viewer Token is linked to a Contact
+            <p></p>
+            <ul>
+                <li><a href="https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-2.0-data-visitors-post.html">Eloqua</a></li>
+                <li><a href="https://developer.adobe.com/marketo-apis/api/mapi/#tag/Leads/operation/getLeadsByFilterUsingGET">Marketo</a></li>
+                <li><a href="https://legacydocs.hubspot.com/docs/methods/contacts/get_batch_by_user_token_with_token_keys">Hubspot</a></li>
+            </ul>
+            <p></p>
+            <aside class="bcls-aside bcls-aside--information language-editable">If you are using Marketo, please make sure that 'filterType' is equal to 'cookies': filterType = 'cookies'</aside>
+            <p></p>
+        </li>
+    </ul>
+
+    <p></p>
+    <h3>Contact Does Not Exist in Audience Insights</h3>
+    <p></p>
+    <ul>
+        <li>Confirm that video view data exists in the Brightcove system and is attributed to the target Contact</li>
+        <li>Refer to <a href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/index.html">Collecting Viewer ID</a> to see how to set up Viewer Tracking in the Player</li>
+    </ul>
+
+    <p></p>
+    <h3>Failed to Sync/Publish Contact</h3>
+    <p></p>
+    <p>If the above steps do not fix the issue, please <a href="https://supportportal.brightcove.com/">contact Brightcove support</a></p>
+
 </section>
